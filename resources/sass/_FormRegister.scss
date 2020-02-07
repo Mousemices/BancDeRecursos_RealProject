@@ -1,0 +1,109 @@
+.gridForm {
+  &.register {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    .main {
+      display: inline-grid;
+      grid-template-columns: auto;
+      grid-template-rows: auto;
+      grid-column-gap: 30px;
+      grid-row-gap: 30px;
+      grid-column: 1;
+      grid-row: 2;
+      padding: 0 30px;
+    }
+    .field {
+      position: relative;
+      flex-direction: column;
+
+      &.header {
+        grid-column: 1;
+        grid-row: 1;
+        text-align: center;
+        h1 {
+          color: $orange;
+        }
+        .loginText {
+          span.small {
+            position: relative;
+            color: $placeholder;
+            font-size: 12px;
+            top: 0;
+            left: 0;
+          }
+        }
+      }
+      &.one {
+        grid-column: 1 / span 2;
+        grid-row: 1;
+      }
+      &.two {
+        grid-column: 1 / span 2;
+        grid-row: 2;
+      }
+      &.three {
+        grid-column: 1 / span 2;
+        grid-row: 3;
+        text-align: right;
+      }
+      &.four {
+        grid-column: 1 / span 2;
+        grid-row: 4;
+      }
+      &.footer {
+        grid-column: 1;
+        grid-row: 5;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .gridForm {
+    &.register {
+      .field {
+        position: relative;
+        flex-direction: column;
+
+        &.header {
+          grid-column: 1;
+          grid-row: 1;
+          text-align: center;
+          h1 {
+            color: $orange;
+          }
+        }
+        &.one {
+          grid-column: 1 / span 2;
+          grid-row: 1;
+        }
+        &.two {
+          grid-column: 1 / span 2;
+          grid-row: 2;
+        }
+        &.three {
+          grid-column: 1 / span 2;
+          grid-row: 3;
+          text-align: right;
+        }
+        &.four {
+          grid-column: 1 / span 2;
+          grid-row: 4;
+        }
+        &.footer {
+          grid-column: 1;
+          grid-row: 5;
+          text-align: center;
+          padding: 0 30px;
+          button {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

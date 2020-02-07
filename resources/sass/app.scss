@@ -1,0 +1,25 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "~bootstrap/scss/bootstrap";
+
+@import "titularHeader";
+@import "batchesAvaliables";
+@import "layoutStyles";
+@import "titularHeader";
+@import "FormPeticiones";
+@import "general";
+@import "FormLogin";
+@import "FormRegister";
+@import "FormRecoverPassword";
+@import "FormResetPassword";
+@import "adminTables";
+@import "batchDetail";
+@import "FormDonaciones";
+@import "adminTablesSalidas";
+@import "adminTablesSalidasAprobadas";
+@import "home";

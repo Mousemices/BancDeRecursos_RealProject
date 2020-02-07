@@ -1,0 +1,91 @@
+.adminTable {
+  &-sortides {
+    table-layout: auto !important;
+    .field {
+      &.header {
+        text-align: center;
+        h1 {
+          color: $orange;
+          border-bottom: none;
+        }
+        hr {
+          border-top: 1px solid $orange;
+          margin: 0;
+        }
+      }
+    }
+    th {
+      background: $orange;
+      padding: 10px;
+    }
+    table {
+      width: 100%;
+    }
+    .form-AdminBtn {
+      button {
+        max-width: 100px;
+        margin: 0 5px;
+      }
+    }
+    tr {
+      border-bottom: solid 1px $orange;
+      position: relative;
+      td {
+        padding: 10px;
+        position: relative;
+      }
+    }
+    td,
+    th {
+      width: auto !important;
+    }
+    .tableContentCell {
+      height: 21px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: pre;
+      color: $orange;
+      transition: all 0.2s;
+      position: relative;
+    }
+    tr {
+      td.anim {
+        padding: 0;
+        .tableContentCell {
+          max-width: 200px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: pre;
+          padding: 0 10px;
+        }
+        &:hover {
+          .tableContentCell {
+            padding: 0;
+            top: 0;
+            bottom: 0;
+            height: 57px;
+            white-space: initial;
+            color: $orange;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.8);
+            overflow: auto;
+            transition: all 0.2s;
+            z-index: 99;
+            &::-webkit-scrollbar {
+              width: 4px;
+            }
+            &::-webkit-scrollbar-track {
+              box-shadow: inset 0 0 6px rgba(247, 148, 30, 0.5);
+              border-radius: 5px;
+            }
+            &::-webkit-scrollbar-thumb {
+              border-radius: 5px;
+              background-color: $orange;
+              outline: 1px solid slategrey;
+            }
+          }
+        }
+      }
+    }
+  }
+}

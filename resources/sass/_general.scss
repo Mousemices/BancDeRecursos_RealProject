@@ -1,0 +1,79 @@
+main{
+    overflow: hidden;
+}
+
+.gridForm{
+    &.form-bg{
+        background: $white;
+        border-radius: 5px;
+        padding: 15px 0;
+        box-shadow: 3px 3px 5px $placeholder;
+    }
+    h1{
+        border: none;
+        &.orange{
+            color:$orange;
+        }
+    }
+
+    .custom-checkbox{
+        padding-left: 25px;
+        &:before{
+            font-family: "FontAwesome";
+            border:2px solid $orange;
+            cursor: pointer;
+            content: "\f00c";
+            width: 20px;
+            height: 20px;
+            display: block;
+            border-radius: 5px;
+            overflow: hidden;
+            background: transparent;
+            transition:all 0.2s;
+            font-size: 13px;
+            line-height: 18px;
+            text-align: center;
+            color: transparent;
+            position: absolute;
+            left: 0;
+            top: 1px;
+        }
+    }
+
+    input[type='checkbox'].input-form{
+        width: initial;
+        border:solid 2px $orange;
+        height: 20px;
+        width: 20px;
+        overflow: hidden;
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        top: 1px;
+        &:checked ~ label:before{
+            background: $orange;
+            color:$white;
+            transition:all 0.2s;
+        }
+    }
+}
+
+
+.field{
+    position: relative;
+    flex-direction: column;
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover, 
+    input:-webkit-autofill:focus,
+    textarea:-webkit-autofill,
+    textarea:-webkit-autofill:hover,
+    textarea:-webkit-autofill:focus,
+    select:-webkit-autofill,
+    select:-webkit-autofill:hover,
+    select:-webkit-autofill:focus {
+      -webkit-text-fill-color: $black;
+      -webkit-box-shadow: 0 0 0px 1000px $white inset;
+      transition: background-color 5000s ease-in-out 0s;
+    }
+}

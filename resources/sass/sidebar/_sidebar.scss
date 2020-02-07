@@ -1,0 +1,16 @@
+//sidebar
+
+.sidebar{
+    width: $sidebar-base-width;
+    min-height: 100vh;
+    .nav-item{
+        position: relative;
+        margin-bottom: 1rem;
+    }
+}
+.bg-gradient-primary{
+    background-color: $bRecursos;
+}
+hr.sidebar-divider {
+    border-top: 1px solid white;
+}

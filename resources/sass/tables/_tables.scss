@@ -1,0 +1,15 @@
+//tables
+td{
+    display:table-cell ;
+}
+.table td{
+    vertical-align: top;
+}
+.title{
+    position: relative;
+    display: inline-block;
+
+}
+.title-sm{
+    width: 2.5rem;
+}

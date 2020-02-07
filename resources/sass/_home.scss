@@ -1,0 +1,19 @@
+#successPetition {
+  .modal-header {
+    border-bottom: solid 1px $orange;
+    color: $orange;
+  }
+  .modal-body {
+    color: $orange;
+  }
+  .close {
+    transition:all 0.3s;
+    &:hover {
+        transition:all 0.3s;
+        color: $orange;
+    }
+  }
+  .btn {
+    background: $orange;
+  }
+}

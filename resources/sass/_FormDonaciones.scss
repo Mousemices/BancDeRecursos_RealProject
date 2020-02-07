@@ -1,0 +1,315 @@
+
+.gridForm{
+    
+    &.donation{
+    &.form-bg{
+        background: $white;
+        border-radius: 5px;
+        padding: 15px 0;
+        box-shadow: 3px 3px 5px $placeholder;
+    }
+    .field{
+        position: relative;
+  
+        label.lab{
+            position: absolute;
+            top:-10px;
+            left: 10px;
+            background: $white;
+            padding: 0 15px;
+            transition: top 0.2s;
+            color: $placeholder;
+        }
+        span.small{
+            position: absolute;
+            bottom: -18px;
+            left: 7px;
+            color: $placeholder;
+            font-size: 12px;
+        }
+        .input-form{
+            border-width: 2px;
+            border-style: solid;
+            border-color: $placeholder;
+            transition: border-color .5s;
+            padding: 15px;
+            border-radius: 5px;
+            width: 100%;
+        }
+        .input-form:focus{
+            outline: none;
+            border-color: $orange;
+            transition: border-color .5s;
+        }
+
+        .input-form:focus ~ label.lab{
+            top:-10px;
+            transition: top 0.2s;
+            color: $orange;
+        }
+        textarea.input-form{
+            height: 100%;
+        }
+
+        .custom-checkbox{
+            padding-left: 25px;
+            &:before{
+                font-family: "FontAwesome";
+                border:2px solid $orange;
+                cursor: pointer;
+                content: "\f00c";
+                width: 20px;
+                height: 20px;
+                display: block;
+                border-radius: 5px;
+                overflow: hidden;
+                background: transparent;
+                transition:all 0.2s;
+                font-size: 13px;
+                line-height: 18px;
+                text-align: center;
+                color: transparent;
+                position: absolute;
+                left: 0;
+                top: 1px;
+            }
+        }
+        input[type='checkbox'].input-form{
+            width: initial;
+            border:solid 2px $orange;
+            height: 20px;
+            width: 20px;
+            overflow: hidden;
+            opacity: 0;
+            position: absolute;
+            left: 0;
+            top: 1px;
+            &:checked ~ label:before{
+                background: $orange;
+                color:$white;
+                transition:all 0.2s;
+            }
+        }
+        
+        button.input-form{
+            width: calc(100% / 3);
+            background: $orange;            
+        }
+        .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle{
+            background: $orange;
+        }
+        
+    }
+    hr{
+        border-top:1px solid $orange;
+    }
+}
+
+}
+
+
+
+.gridForm{
+    &.donation{
+        display: grid;   
+    grid-template-columns: auto auto auto ;
+    grid-template-rows: auto ;
+        .field{
+            position: relative;
+            .main{ 
+                display: grid;   
+                grid-template-columns: auto auto auto ;
+                grid-template-rows: auto auto;
+                grid-column-gap: 30px;
+                grid-row-gap: 30px;
+                grid-column: 1 / span 2;
+                grid-row: 2;
+                padding: 0 30px;
+            }
+            &.header{
+                grid-column: 1 / span 3;
+                grid-row: 1;
+                text-align: center;
+                h1{
+                    color:$orange;
+                }
+            }
+            &.one{
+                grid-column: 1/ span 3;
+                grid-row: 2;
+            }
+            &.two{
+                
+                grid-column: 4/ span 2;
+                grid-row: 2;
+            }
+            &.three{
+                
+                grid-column: 1/ span 3;
+                grid-row: 3;
+            }
+            &.four{            
+                grid-column: 4/ span 1;
+                grid-row: 3;
+            }
+            &.five{            
+                grid-column: 5 /span 2;
+                grid-row: 3;
+            }
+            &.six{            
+                grid-column: 1/ span 3;
+                grid-row: 4;
+            }
+            &.seven{
+                grid-column: 4/span 2;
+                grid-row: 4;
+            }
+            &.eight{
+                grid-column: 1/span 3;
+                grid-row: 5;
+            }
+            &.nine{
+                grid-column: 1/span 3;
+                grid-row: 6;
+            }
+            &.ten{
+                grid-column: 4/ span 2;
+                grid-row: 5/ span 2;
+                .input-form{
+                    &.file{
+                        visibility: hidden;
+                    }
+                    &.label{
+                        height:100%;
+                        width: 100%;
+                        position: relative;
+
+                        &:before{
+                            background-image: url("public/img/upload.png");
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            content:'arrossega o clica aqui';
+                            text-align: center;
+                            display:block;
+                            height:70%;
+                            width:70%;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            margin: auto;
+                            border:dashed 2px $orange;
+                            padding: auto;
+                        }
+                    }
+                }
+                &.input-form.border{
+                    border: 1px;
+                }
+            }
+            &.eleven{
+                grid-column: 1;
+                grid-row: 7;
+            }
+            /* &.qwe{
+                grid-column: 3/span 3;
+                grid-row: 2;
+            } */
+            &.footer{
+                grid-column: 1 /span 3;
+                grid-row: 8;
+                text-align: center;
+            }
+        }
+
+    }
+}
+
+@media (max-width: 767px){
+    .gridForm{
+        &.donation{
+            display: grid;   
+        grid-template-columns: auto ;
+        grid-template-rows: auto ;
+            .field{
+                position: relative;
+                .main{ 
+                    display: grid;   
+                    grid-template-columns: 1 ;
+                    grid-template-rows: auto;
+                    grid-column-gap: 30px;
+                    grid-row-gap: 30px;
+                    grid-column: 1 / span 2;
+                    grid-row: 2;
+                    padding: 0 30px;
+                }
+                &.header{
+                    grid-column: 1 / span 3;
+                    grid-row: 1;
+                    text-align: center;
+                    h1{
+                        color:$orange;
+                    }
+                }
+                &.one{
+                    grid-column: 1/ span 3;
+                    grid-row: 2;
+                }
+                &.two{
+                    
+                    grid-column: 1/ span 3;
+                    grid-row: 3;
+                }
+                &.three{
+                    
+                    grid-column: 1/ span 3;
+                    grid-row: 4;
+                }
+                &.four{            
+                    grid-column: 1/ span 3;
+                    grid-row: 5;
+                }
+                &.five{            
+                    grid-column: 1 /span 3;
+                    grid-row: 6;
+                }
+                &.six{            
+                    grid-column: 1 / span 3;
+                    grid-row: 7;
+                }
+                &.seven{
+                    grid-column: 1 /span 3;
+                    grid-row: 8;
+                }
+                &.eight{
+                    grid-column: 1 /span 3;
+                    grid-row: 9;
+                }
+                &.nine{
+                    grid-column: 1 /span 3;
+                    grid-row: 10 ;
+                }
+                &.ten{
+                    grid-column: 1/ span 3;
+                    grid-row: 11/ span 2;
+                    height: 100%;
+                }
+                &.eleven{
+                    grid-column: 1 / span 3;
+                    grid-row: 13 ;
+                }
+                /* &.qwe{
+                    grid-column: 3/span 3;
+                    grid-row: 2;
+                } */
+                &.footer{
+                    grid-column: 1 /span 3;
+                    grid-row: 16;
+                    text-align: center;
+                }
+            }
+    
+        }
+    }
+}
